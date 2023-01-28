@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block content%}
+
+
+
+Formulario para editar del codigo :
+{% for usuario in usuario %}
+{{ usuario[0]  }}
+<div class="container">
+    <form class="row g-3" method="post" action="/update" enctype="multipart/form-data">
+        <div class="col-md-1">
+    <label for="inputID" class="form-label">ID</label>
+    <input class="form-control" type="text" value="{{ usuario[0]  }}" name="txtId" id="txtId">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputDNI" class="form-label">DNI</label>
+    <input class="form-control" type="text" value="{{ usuario[1]  }}" name="txtDNI" id="txtDNI">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputNOMBRE" class="form-label">NOMBRE</label>
+    <input class="form-control" type="text" value="{{ usuario[2]  }}" name="txtNombre" id="txtNombre">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputApellidoPaterno" class="form-label">APELLIDO PATERNO</label>
+    <input class="form-control" type="text" value="{{ usuario[3]  }}" name="txtApellidoPat" id="txtApellidoPat">
+        </div>
+
+         <div class="col-md-2">
+    <label for="inputApellidoMaterno" class="form-label">APELLIDO MATERNO</label>
+    <input class="form-control" type="text" value="{{ usuario[4]  }}" name="txtApellidoMat" id="txtApellidoMat">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputDistrito" class="form-label">DISTRITO</label>
+    <input class="form-control" value="{{ usuario[6]  }}" name="txtDistrito" id="txtDistrito">
+        </div>
+
+         <div class="col-md-2">
+    <label for="inputDistrito" class="form-label">FECHA DE NACIMIENTO</label>
+    <input class="form-control" type="date" value="{{ usuario[7]  }}" name="txtFech" id="txtFech">
+        </div>
+
+        <div class="col-6">
+    <label for="inputAddress" class="form-label">DIRECCIÓN</label>
+    <input type="text" class="form-control" type="text" value="{{ usuario[5]  }}" name="txtDire" id="txtDire">
+        </div>
+
+          <div class="col-md-1">
+    <label for="inputDistrito" class="form-label">SEXO</label>
+    <input class="form-control" type="text" value="{{ usuario[8]  }}" name="txtSex" id="txtSex">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputCel" class="form-label">CELULAR</label>
+    <input class="form-control" type="text" value="{{ usuario[9]  }}" name="txtCel" id="txtCel">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputCel" class="form-label">CONTRASEÑA</label>
+    <input class="form-control" type="password" value="{{ usuario[10]  }}" name="txtPassword" id="txtPassword">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputCel" class="form-label">COOREO</label>
+    <input class="form-control" type="text" value="{{ usuario[11]  }}" name="txtCorreo" id="txtCorreo">
+        </div>
+
+        <div class="col-md-1">
+    <label for="inputZip" class="form-label">ROL</label>
+    <input class="form-control" type="text" value="{{ usuario[12]  }}" name="txtRol" id="txtRol">
+        </div>
+
+         <div class="col-md-3">
+    <label for="inputZip" class="form-label">FOTO</label>
+             <img class="img-thumbnail" width="100" src="{{url_for('Fotos', nombreFoto= usuario[13])}}" alt="">
+    <input class="form-control"  type="file" value="{{ usuario[13]  }}" name="txtFoto" id="txtFoto">
+        </div>
+
+
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+    </div>
+
+{% endfor %}
+{% endblock %}
+

@@ -1,0 +1,44 @@
+
+   <table class="table table-light">
+        <thead class="thead-light">
+            <tr>
+                <th>Foto</th>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Dirección</th>
+                <th>Distrito</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Sexo</th>
+                <th>Celular</th>
+                <th>Usuario</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuario %}
+            <tr>
+                <td>
+                    <img class="img-thumbnail" width="100" src="Fotos/{{usuario[14]}}" alt="">
+
+                </td>
+                <td>{{usuario[1]}}</td>
+                <td>{{usuario[2]}}</td>
+                <td>{{usuario[3]}}</td>
+                <td>{{usuario[4]}}</td>
+                <td>{{usuario[5]}}</td>
+                <td>{{usuario[6]}}</td>
+                <td>{{usuario[7]}}</td>
+                <td>{{usuario[8]}}</td>
+                <td>{{usuario[9]}}</td>
+                <td>{{usuario[10]}}</td>
+
+                <td>
+                    <a href="/EditarUsuario/{{usuario[0]}}">editar</a>
+
+                    </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
