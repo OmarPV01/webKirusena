@@ -1,0 +1,104 @@
+{% extends "layoutUser.html" %}
+{% block content%}
+{% for usuario in usuario %}
+
+<div class="container" style="background:white; padding:25px; border-radius:15px">
+    <br>
+    <form class="row g-3" method="post" action="/update" enctype="multipart/form-data">
+
+
+        <div class="col-md-2">
+    <label for="inputDNI" class="form-label">DNI</label>
+    <input class="form-control" type="text" value="{{ usuario[1]  }}" name="txtDNI" id="txtDNI">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputNOMBRE" class="form-label">NOMBRE</label>
+    <input class="form-control" type="text" value="{{ usuario[2]  }}" name="txtNombre" id="txtNombre">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputApellidoPaterno" class="form-label">APELLIDO PATERNO</label>
+    <input class="form-control" type="text" value="{{ usuario[3]  }}" name="txtApellidoPat" id="txtApellidoPat">
+        </div>
+
+         <div class="col-md-2">
+    <label for="inputApellidoMaterno" class="form-label">APELLIDO MATERNO</label>
+    <input class="form-control" type="text" value="{{ usuario[4]  }}" name="txtApellidoMat" id="txtApellidoMat">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputDistrito" class="form-label">DISTRITO</label>
+    <input class="form-control" value="{{ usuario[6]  }}" name="txtDistrito" id="txtDistrito">
+        </div>
+
+         <div class="col-md-2">
+    <label for="inputNacimiento" class="form-label">FECHA DE NACIMIENTO</label>
+    <input class="form-control" type="date" value="{{ usuario[7]  }}" name="txtFech" id="txtFech">
+        </div>
+
+        <div class="col-6">
+    <label for="inputDireccion" class="form-label">DIRECCIÓN</label>
+    <input type="text" class="form-control" type="text" value="{{ usuario[5]  }}" name="txtDire" id="txtDire">
+        </div>
+
+
+          <div class="col-md-2">
+    <label for="inputSexo" class="form-label">SEXO</label>
+              <br>
+              {% if usuario[8] == "M" %}
+                <input  type="radio" value="M" name="txtSex" id="txtSex" checked>
+                    <label for="html">MASCULINO</label><br>
+                   <input  type="radio" value="F" name="txtSex" id="txtSex" >
+                    <label for="html">FEMENINO</label><br>
+              {% else %}
+              <input  type="radio" value="M" name="txtSex" id="txtSex" >
+                    <label for="html">MASCULINO</label><br>
+              <input  type="radio" value="F" name="txtSex" id="txtSex" checked>
+               <label for="html">FEMENINO</label><br>
+                {% endif %}
+        </div>
+
+
+
+
+        <div class="col-md-2">
+    <label for="inputCel" class="form-label">CELULAR</label>
+    <input class="form-control" type="text" value="{{ usuario[9]  }}" name="txtCel" id="txtCel">
+        </div>
+
+        <div class="col-md-2">
+    <label for="inputContra" class="form-label">CONTRASEÑA</label>
+    <input class="form-control" type="password" value="{{ usuario[10]  }}" name="txtPassword" id="txtPassword">
+        </div>
+
+
+
+         <div class="col-md-4">
+    <label for="inputFoto" class="form-label">FOTO</label>
+             <br>
+             <img class="img-thumbnail" width="100" src="{{url_for('Fotos', nombreFoto= usuario[13])}}" alt="">
+    <input class="form-control"  type="file" value="{{ usuario[13]  }}" name="txtFoto" id="txtFoto">
+        </div>
+
+       <div class="col-md-2">
+    <label for="inputCorreo" class="form-label">CORREO</label>
+    <input class="form-control" type="text" value="{{ usuario[11]  }}" name="txtCorreo" id="txtCorreo">
+        </div>
+
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        De acuerdo con los terminos y condiciones
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">EDITAR</button>
+  </div>
+</form>
+    </div>
+
+{% endfor %}
+{% endblock %}

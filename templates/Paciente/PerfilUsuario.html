@@ -1,0 +1,98 @@
+{% extends "layoutUser.html" %}
+{% block content%}
+
+{% for usuario in usuario %}
+<div class="container">
+<div class="col-lg-4 col-xlg-3 box-profile" >
+    <div class="card" style="box-shadow: 0px 0px 5px 1px #A295A7;">
+        <img class="card-img-top" src="static/imagen/ok.jpeg" alt="Card image cap">
+        <div class="card-body little-profile text-center">
+        <div class="pro-img img-profile"><img width="100" src="Fotos/{{usuario[13]}}" alt="user"></div>
+        <h3 class="mb-0">{{usuario[2]}}</h3> <p>{{usuario[3]}} &amp; {{usuario[4]}}</p>
+        <a href="/EditarUsuario/{{usuario[0]}}" class="mt-2 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Editar</a>
+        </div> </div>
+
+
+    <div class="foobox" style="">
+      <a href=""><i class="fa fa-linkedin"></i></a>
+      <a href=""><i class="fa fa-twitter"></i></a>
+    </div>
+        <button class="accordion">Más información <i class="gg-chevron-double-down"></i></button>
+
+    <div class="panel" id="panel">
+        <h5 class=""> Datos completos del perfil</h5>
+        <table class="sticky-table-column" style="padding: 20% 0;">
+    <thead>
+        <tr>
+            <th class="sticky-table-column__sticky">DNI</th>
+            <th class="sticky-table-column__sticky">{{usuario[1]}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="sticky-table-column__sticky">Dirección</td>
+            <th class="sticky-table-column__sticky">{{usuario[4]}}</th>
+        </tr>
+    </tbody>
+</table>
+    </div>
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+{% endfor %}
+<div class="container">
+    <h4 class="text-light"> Datos completos del perfil</h4>
+   <table class="table table-light" style="padding: 25% 0;;">
+        <thead class="thead-light">
+            <tr>
+                <th>DNI</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Dirección</th>
+                <th>Distrito</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Sexo</th>
+                <th>Celular</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuario %}
+            <tr style="padding: 15px;">
+
+                <td>{{usuario[1]}}</td>
+                <td>{{usuario[2]}}</td>
+                <td>{{usuario[3]}}</td>
+                <td>{{usuario[4]}}</td>
+                <td>{{usuario[5]}}</td>
+                <td>{{usuario[6]}}</td>
+                <td>{{usuario[7]}}</td>
+                <td>{{usuario[8]}}</td>
+                <td>{{usuario[9]}}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+    var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function(){
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+            }
+        }
+</script>
+  {% endblock %}

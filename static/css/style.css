@@ -1,0 +1,205 @@
+btn-info {
+    color: #fff;
+    background-color: #009efb;
+    border-color: #2671a0;
+
+}
+.ks{
+    font-family: Rubik,sans-serif;
+    font-weight: bold;
+
+}
+.menu{
+    background: linear-gradient(to right,#01c0c8 0,#12649b 100%);
+    /*background-color: #16232b;*/
+
+}
+.menu a:hover {
+    color: #ffff; /*01c0c8*/
+}
+.base{
+    /*background: linear-gradient(to right,#f6fcfc 0,#12649b 100%);*/
+    background: linear-gradient(to right,#f6fcfc 0,#f6fcfc 100%);
+}
+.footer{
+    background-color: #0a0f13;
+}
+.rounded-md {
+    border-radius: 15px;
+}
+.select-style {
+    margin-bottom: 1em;
+    padding: 0.25em;
+    border: 0;
+    border-bottom: 2px solid currentcolor;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    border-radius: 0;
+    width: 100%;
+    background-color: transparent;
+}
+.select-languag {
+    color: #0a0f13;
+    font-size: 1.4rem;
+    text-shadow: #DAF1FF 0.1em 0.1em 0.2em
+}
+.transcript {
+    border: 1px solid gray;
+    height: 300px;
+    border-radius: 15px;
+    background-color: #4F6260;
+}
+.color-btn {
+    background: #373737;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 12px;
+}
+.icon {
+    color: white;
+}
+.decorate-btn{
+
+    --glow-color: white;
+    --glow-spread-color: rgba(205, 249, 247, 0.781);
+    --enhanced-glow-color: transparent;
+    --btn-color: transparent;
+    /*border: .20em solid var(--glow-color);*/
+    /*padding: 1em 3em;*/
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+
+    border: 2px solid white;
+    padding: 3px 16px !important;
+    outline:none !important;
+    border-radius: 0.5em;
+}
+.decorate-btn:hover {
+ box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 2em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
+        text-shadow: 0 0 .5em var(--glow-spread-color);
+}
+/* profile */
+.box-profile{
+    margin: 0 auto;
+
+}
+.little-profile .pro-img img {
+    width: 128px;
+    height: 128px;
+    -webkit-box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    border-radius: 100%;
+}
+body.fondo{
+    background-image: url(../imagen/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+div.image {
+    background-image:url(../imagen/diente.png);
+    position:relative;
+    z-index:-1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding:25px; border-radius:15px
+ }
+ div.faq{
+    position:relative;
+    z-index:2;
+    color: rgb(1, 21, 45) !important;
+    font-size: 18px !important;
+ }
+ .bold{
+    font-weight: bold !important;
+ }
+ /**/
+ button.accordion {
+    background-color: #3696C9;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: white;
+    color: #54B3CB;
+}
+
+button.accordion:after {
+    /*content: '\02795';*/
+    font-size: 15px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    /*content: "\2796";*/
+    color: red;
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px;
+}
+
+
+  /*cheveron*/
+ .gg-chevron-double-down {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1.5));
+    width: 24px;
+    height: 24px;
+    color:#54B3CB;
+    float: right;
+}
+.gg-chevron-double-down::after,
+.gg-chevron-double-down::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: 7px;
+    top: 3px
+}
+.gg-chevron-double-down::after {
+    top: 8px
+}
+.iframe{
+    width: 100%;
+    max-width: 100% !important;
+    height: 315px !important;
+    
+}
+.col-md-6{
+   padding-bottom: 8px;
+}

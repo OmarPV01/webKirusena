@@ -1,13 +1,12 @@
-{% extends "layout.html" %}
+{% extends "layoutUser.html" %}
 {% block content%}
 
 <div class="container rounded-md p-5 someClass">
-    <div class="mt-4" id="div_language">
-      <h2 class="mb-3 select-languag">Traducir voz a texto</h2>
+    <div class="" id="div_language">
       <select class=" select-style" id="select_language" onchange="updateCountry()" hidden></select>
       <select class=" select-style " id="select_dialect"></select>
     </div>
-    <h2 class="mt-4 select-languag">Transcripción</h2>
+    <h2 class="mt-4 select-languag">Traducir voz a texto</h2>
     <div class="p-3 transcript ">
       <span id="final" class="text-light"></span>
       <span id="interim" class="text-secondary"></span>
@@ -15,8 +14,9 @@
     <div class="mt-4">
       <button class="color-btn icon" id="start"><i class="bi bi-mic icon"></i>Iniciar</button>
       <button class="color-btn icon" id="stop"><i class="bi bi-stop-circle icon"></i> Pausar</button>
-      <button class="color-btn" style="float: right;"  > <i class="bi bi-trash3 icon "></i></button>
-      <p id="status" class="lead mt-3 text-light" style="display: none">Listenting ...</p>
+      <button class="color-btn" id="clear" style="float: right;" > <i class="bi bi-trash3 icon "></i></button>
+      <p id="status" class="lead mt-3 text-light" style="display: none">Escuchando ...</p>
+
     </div>
   </div>
 

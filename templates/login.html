@@ -19,12 +19,12 @@
                     <div class="caja__trasera-login">
                         <h3>¿Ya tienes una cuenta?</h3>
                         <p>Inicia sesión para entrar en la página</p>
-                        <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                        <button id="btn__iniciar-sesion">Iniciar sesión</button>
                     </div>
                     <div class="caja__trasera-register">
                         <h3>¿Aún no tienes una cuenta?</h3>
                         <p>Regístrate para que puedas iniciar sesión</p>
-                        <button id="btn__registrarse">Regístrarse</button>
+                        <button id="btn__registrarse">Regístrate</button>
                     </div>
                 </div>
 
@@ -32,33 +32,30 @@
                 <div class="contenedor__login-register">
                     <!--Login-->
                     <form action="/login" method="POST" class="formulario__login">
-                        <h2>Iniciar Sesión</h2>
-                        <input type="text" name="txtCorreo" id="txtCorreo" placeholder="Correo Electronico">
+                        <h2>Iniciar sesión</h2>
+                        <span class="spanMsg" id="spanMsg">{{_Mensaje}}</span>
+                        <input type="text" name="txtCorreo" id="txtCorreo" placeholder="Correo electrónico">
                         <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña">
                         <button>Entrar</button>
+                        <br><br>
+                        <b><a href="{{url_for('Recuperar')}}">¿Olvidaste tu contraseña?</a></b>
                     </form>
 
                     <!--Register-->
                     <form action="/creationUsuario" method="POST" class="formulario__register">
                         <h2>Regístrarse</h2>
-                        <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre completo">
-                        <input type="text" name="txtApellidoPat" id="txtApellidoPat" placeholder="Apellido Paterno">
-                        <input type="text" name="txtCorreo" id="txtCorreo" placeholder="Correo Electronico">
-                        <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña">
-                        <div class="radio">
-                            <label for="Paciente">Paciente :</label>
-                        <input type="radio" name="txtRol" id="P" value="P">
-                                <label for="Doctor">Doctor :</label>
-                        <input type="radio" name="txtRol" id="D" VALUE="D">
-                        </div>
-                        <button>Regístrarse</button>
+                        <span class="spanMsg">{{msgNombre}}</span>
+                        <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre completo" required>
+                        <input type="text" name="txtApellidoPat" id="txtApellidoPat" placeholder="Apellido paterno" required>
+                        <input type="text" name="txtCorreo" id="txtCorreo" placeholder="Correo electrónico" required>
+                        <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required>
+                        <button>Regístrate</button>
                     </form>
                 </div>
             </div>
 
         </main>
-
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 <script src="{{url_for('static',filename='js/speechRecognition.js')}}"></script>
 <script src="{{url_for('static',filename='js/language.js')}}"></script>

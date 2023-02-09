@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="canonical" href="https://appseed.us/generator/materialpro-lite/">
 </head>
 
-<body>
+<body class="someclass">
 
     <header class="menu">
         <nav class="navbar navbar-expand-lg navbar-toggleable-lg navbar-light  border-bottom box-shadow mb-3">
@@ -30,22 +31,22 @@
                 <div id="navbarTogglerDemo" class="navbar-collapse collapse d-sm-inline-flex ">
                     <ul class="navbar-nav me-auto flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="/">Home</a>
+                            <a class="nav-link text-light" href="/home">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="{{url_for('about')}}">Inicio</a>
+                            <a class="nav-link text-light" href="{{url_for('about')}}">Servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="{{url_for('speach')}}">Voz a Texto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="{{url_for('translate')}}">Traductor de Señas</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link text-light" href="{{url_for('PerfilUsuario')}}">Perfil Usuario</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{{url_for('faq')}}">FAQ</a>
+                        </li>
                     </ul>
-                    <a type="button" class="d-flex nav-link text-light decorate-btn" href="{{url_for('login')}}">Login</a>
+                    <a type="button" class="d-flex nav-link text-light decorate-btn" href="{{url_for('login')}}">Salir</a>
                 </div>
             </div>
         </nav>
@@ -59,7 +60,8 @@
 <script src="{{url_for('static',filename='js/speechRecognition.js')}}"></script>
 <script src="{{url_for('static',filename='js/language.js')}}"></script>
 <script src=" {{url_for('static',filename='js/scriptlogin.js')}}"></script>
-
+<script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/plugins/jquery/dist/jquery.min.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/js/app-style-switcher.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/js/waves.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/js/sidebarmenu.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/plugins/chartist-js/dist/chartist.min.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/plugins/d3/d3.min.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/plugins/c3-master/c3.min.js"></script> <script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/js/pages/dashboards/dashboard1.js"></script>
+<script src="https://appsrv1-147a1.kxcdn.com/wpx-materialpro-lite/js/custom.js"></script>
 </body>
 
 </html>

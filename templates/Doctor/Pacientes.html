@@ -1,4 +1,6 @@
-
+{% extends "layourDoc.html" %}
+{% block content%}
+<div class="container">
    <table class="table table-light">
         <thead class="thead-light">
             <tr>
@@ -12,14 +14,14 @@
                 <th>Fecha de Nacimiento</th>
                 <th>Sexo</th>
                 <th>Celular</th>
-                <th>Usuario</th>
+                <th>Clave</th>
             </tr>
         </thead>
         <tbody>
             {% for usuario in usuario %}
             <tr>
                 <td>
-                    <img class="img-thumbnail" width="100" src="Fotos/{{usuario[14]}}" alt="">
+                    <img class="img-thumbnail" width="100" src="Fotos/{{usuario[13]}}" alt="">
 
                 </td>
                 <td>{{usuario[1]}}</td>
@@ -31,14 +33,12 @@
                 <td>{{usuario[7]}}</td>
                 <td>{{usuario[8]}}</td>
                 <td>{{usuario[9]}}</td>
-                <td>{{usuario[10]}}</td>
+                <td><div class="center">xxxxxxx</div></td>
 
-                <td>
-                    <a href="/EditarUsuario/{{usuario[0]}}">editar</a>
 
-                    </td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-
+    </div>
+{% endblock %}
